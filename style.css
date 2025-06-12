@@ -1187,9 +1187,6 @@ body {
   }
 }
 
-.not-loaded * {
-  animation-play-state: paused !important;
-}
 
 .flower--4 {
   left: 20%;
@@ -1245,65 +1242,62 @@ body {
   animation: blooming-leaf-left var(--fl-speed) 1.5s backwards;
 }
 
-/* Estilos do Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Acima de tudo */
-  opacity: 0; /* Começa invisível */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transição mais suave e com transform */
-  transform: scale(0.95); /* Começa um pouco menor */
-}
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(0.95);
 
 .modal-overlay.show-modal {
-  opacity: 1; /* Fica visível */
-  transform: scale(1); /* Volta ao tamanho normal */
+  opacity: 1;
+  transform: scale(1);
 }
 
 .modal-content {
   position: relative;
-  z-index: 1001; /* Acima do overlay */
-  max-width: 90%; /* Para telas menores */
-  max-height: 90%; /* Para telas menores */
-  overflow-y: auto; /* Para conteúdo rolável */
+  z-index: 1001;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
 }
 
 /* Media Queries para Responsividade */
-@media (min-width: 640px) { /* sm breakpoint do Tailwind */
+@media (min-width: 640px) {
   .modal-content {
-    max-width: 500px; /* Um pouco maior para tablets pequenos */
+    max-width: 500px;
   }
 }
 
-@media (min-width: 768px) { /* md breakpoint do Tailwind */
+@media (min-width: 768px) {}
   .modal-content {
-    max-width: 600px; /* Maior para tablets */
+    max-width: 600px;
   }
 }
 
-@media (min-width: 1024px) { /* lg breakpoint do Tailwind */
+@media (min-width: 1024px) {
   .modal-content {
-    max-width: 700px; /* Para desktops ou tablets maiores */
+    max-width: 700px;
   }
 }
 
-/* Estilos para a imagem do carrossel */
 .carousel-image-container img {
-  max-height: 300px; /* Altura máxima para a imagem */
-  width: auto; /* Mantém a proporção */
-  object-fit: contain; /* Garante que a imagem inteira seja visível */
-  margin: 0 auto; /* Centraliza a imagem */
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
-@media (max-width: 639px) { /* Para telas muito pequenas (celulares) */
+@media (max-width: 639px) {
   .carousel-image-container img {
-    max-height: 200px; /* Reduzir ainda mais em telas pequenas */
+    max-height: 200px;
   }
 }

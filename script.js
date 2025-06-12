@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       conteudoFinal.classList.remove('hidden');
       conteudoFinal.classList.add('show-modal');
       document.body.classList.remove('overflow-hidden');
+      document.body.classList.add('modal-active');
     }, 5000);
   });
 
@@ -63,12 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
         imagem.classList.add("show");
         legenda.classList.add("show");
       };
-    }, 1000); // espera fade-out
+    }, 1000);
   }
 
-  // Inicializa com a primeira imagem e legenda com fade-in
   imagem.classList.add("show");
   legenda.classList.add("show");
 
-  setInterval(trocarImagem, 5000); // troca a cada 5s
+  setInterval(trocarImagem, 5000);
 });
